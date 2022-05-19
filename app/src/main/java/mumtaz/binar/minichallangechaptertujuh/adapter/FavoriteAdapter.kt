@@ -1,5 +1,6 @@
 package mumtaz.binar.minichallangechaptertujuh.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +8,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_country.view.*
-import kotlinx.android.synthetic.main.item_grid_country.view.btn_favorite
+import kotlinx.android.synthetic.main.item_country.view.btn_favorite
 import kotlinx.android.synthetic.main.item_grid_country.view.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
@@ -27,16 +28,16 @@ class FavoriteAdapter(private val listCountry: List<Favorite>): RecyclerView.Ada
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data = listCountry[position]
-
         holder.itemView.apply {
             val txtCapital = "Capital : ${data.capital}"
             val txtPopulation = "Population : ${data.population}"
             val txtRegion = "Region : ${data.region}"
-            tv_countryy.text = data.name
-            tv_capitall.text = txtCapital
-            tv_cpopulationn.text = txtPopulation
-            Glide.with(holder.itemView).load(data.flag).into(img_countryy)
-            tv_regionn.text = txtRegion
+            tv_country.text = data.name
+            tv_capital.text = txtCapital
+            tv_cpopulation.text = txtPopulation
+            Glide.with(holder.itemView).load(data.flag).into(img_country)
+            tv_region.text = txtRegion
+
             val mDb = FavoriteDatabase.getInstance(this.context)
             btn_favorite.setBackgroundResource(R.drawable.ic_fav)
             btn_favorite.setOnClickListener {

@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MiniChallangeChapterTujuh">
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".view.FavoriteActivity"
             android:exported="false" />
         <activity
             android:name=".view.GridActivity"
