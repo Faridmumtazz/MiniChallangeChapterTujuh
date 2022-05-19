@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="25dp"
+    android:layout_marginVertical="20dp"
+    android:elevation="7dp"
+    android:translationZ="7dp"
+    app:cardCornerRadius="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_countryy"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher_background" />
+        <ImageView
+            android:id="@+id/btn_favorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/ic_fav" />
+
+        <TextView
+            android:id="@+id/tv_countryy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_countryy"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_capitall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_countryy"
+            android:layout_marginHorizontal="5dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_cpopulationn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_regionn"
+            android:layout_marginHorizontal="5dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/tv_regionn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_capitall"
+            android:layout_marginHorizontal="5dp"
+            android:text=""
+            android:visibility="gone"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
